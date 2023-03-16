@@ -1,0 +1,477 @@
+.main_container {
+    background-image: url(../../../public/images/background_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.vertically {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 320px;
+    right: -210px;
+}
+
+.vertically h1 {
+    font-size: 10em;
+    background: -webkit-linear-gradient(rgb(172, 172, 172), rgba(238, 238, 238, 0));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.paragraph1{
+    padding-left: 4.3em !important;
+}
+
+.animation {
+    position: absolute;
+    z-index: 0;
+}
+
+.cont_circle {
+    position: static;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        width: 450px;
+        height: 450px;
+    }
+    0% {
+        width: 480px;
+        height: 480px;
+        /* box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3); */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      50% {
+        width: 500px;
+        height: 500px;     
+        /* box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.4); */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;    }
+      100% {
+        width: 480px;
+        height: 480px;
+        /* box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3); */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+}
+
+.Xs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.X1 {
+    height: 45px;
+    transform: skew(40deg);
+    rotate: 130deg;
+    position: absolute;
+    transition: 1s ease;
+    animation-name: show_up;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+      
+    @keyframes show_up {
+        from {
+          width: 0px;
+      
+        }
+        to {
+          width: 450px;
+        }
+    }
+
+
+.X2 {
+    height: 45px;
+    transform: skew(-40deg);
+    rotate: -130deg;
+    position: absolute;
+    transition: 1s ease;
+    animation-name: show_up;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.television {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 270px;
+    height: 180px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    animation-name: turnOn;
+    animation-delay: 2s;
+    animation-direction: normal;
+  }
+
+  .television {
+    transform: translatey(0px);
+    animation: 6s ease-in-out infinite;
+  }
+  
+  .screen {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: url(../../../public/images/f57d6866c8342e0687fc2aa005963a04.png);
+    background-size: cover;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    animation-name: turnOn;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes turnOn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }  
+
+main {
+    z-index: 1;
+    position: relative;
+}
+
+/* Start of mediaQuery */
+
+@media (max-width: 576px) {
+    .blockrevealdiv h2 {
+        font-size: 1.9em !important;
+    }
+
+    .ps-5 {
+        padding-left: 1rem !important;
+    }
+
+    .vertically {
+        margin-right: 20px;
+        margin-top: -10px;
+        top: 100px;
+        right: -200px;
+        box-sizing: border-box;
+        height: 150px;
+        display: flex;
+        align-items: center
+        ;
+    }
+
+    .cont_circle {
+        height: 300px;
+    }
+    .circle {
+        height: 300px;
+        width: 300px;
+    }
+    
+    @keyframes bounce {
+        0% {
+            width: 290px;
+            height: 290px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          }
+          50% {
+            width: 300px;
+            height: 300px;     
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;    }
+          100% {
+            width: 290px;
+            height: 290px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          }
+    }
+
+    .animation {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        margin-top: 15rem;
+    }
+
+    .main_container {
+        display: flex;
+        justify-content: center;
+        align-items: unset;   
+    }
+
+    .basemain {
+        align-items:flex-start !important;
+        margin-top: 10rem;
+    }
+
+    .X1 {
+        height: 40px;
+    }
+          
+        @keyframes show_up {
+            from {
+              width: 0px;
+          
+            }
+            to {
+              width: 270px;
+            }
+        }
+    
+    
+    .X2 {
+        height: 40px;
+        transform: skew(-40deg);
+        rotate: -130deg;
+        position: absolute;
+        transition: 1s ease;
+        animation-name: show_up;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .paragraph1{
+        padding-left: 1em !important;
+    }
+    
+}
+
+
+@media (max-width: 992px) {
+    .blockrevealdiv h2 {
+        font-size: 2.7em !important;
+    }
+
+    .ps-5 {
+        padding-left: 0rem !important;
+    }
+
+    .vertically {
+        margin-right: 20px;
+        margin-top: -30px;
+        top: 400px;
+        right: -230px;
+        box-sizing: border-box;
+        height: 150px;
+        display: flex;
+        align-items: center
+        ;
+    }
+
+    .cont_circle {
+        height: 365px;
+    }
+    .circle {
+        height: 380px;
+        width: 380px;
+    }
+    
+    @keyframes bounce {
+        0% {
+            width: 365px;
+            height: 365px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          }
+          50% {
+            width: 380px;
+            height: 380px;     
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;    }
+          100% {
+            width: 365px;
+            height: 365px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          }
+    }
+
+    .animation {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        margin-top: 15rem;
+    }
+
+    .main_container {
+        display: flex;
+        justify-content: center;
+        align-items: unset;   
+    }
+
+    .basemain {
+        align-items:flex-start !important;
+        margin-top: 10rem;
+    }
+
+    .X1 {
+        height: 40px;
+    }
+          
+        @keyframes show_up {
+            from {
+              width: 0px;
+          
+            }
+            to {
+              width: 270px;
+            }
+        }
+    
+    
+    .X2 {
+        height: 40px;
+        transform: skew(-40deg);
+        rotate: -130deg;
+        position: absolute;
+        transition: 1s ease;
+        animation-name: show_up;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .paragraph1{
+        padding-left: 1em !important;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .blockrevealdiv h2 {
+        font-size: 2.5em !important;
+    }
+
+    .ps-5 {
+        padding-left: 0rem !important;
+    }
+
+    .vertically {
+        top: 400px;
+        right: -230px;
+        box-sizing: border-box;
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cont_circle {
+        height: 340px;
+    }
+    .circle {
+        height: 350px;
+        width: 350px;
+    }
+    
+    @keyframes bounce {
+        0% {
+            width: 335px;
+            height: 335px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          }
+          50% {
+            width: 350px;
+            height: 350px;     
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;    }
+          100% {
+            width: 335px;
+            height: 335px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          }
+    }
+
+    .animation {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        margin-top: 15rem;
+    }
+
+    .main_container {
+        display: flex;
+        justify-content: center;
+        align-items: unset;   
+    }
+
+    .basemain {
+        align-items:flex-start !important;
+        margin-top: 10rem;
+    }
+
+    .X1 {
+        height: 40px;
+    }
+          
+        @keyframes show_up {
+            from {
+              width: 0px;
+          
+            }
+            to {
+              width: 270px;
+            }
+        }
+    
+    
+    .X2 {
+        height: 40px;
+        transform: skew(-40deg);
+        rotate: -130deg;
+        position: absolute;
+        transition: 1s ease;
+        animation-name: show_up;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .paragraph1{
+        padding-left: 1em !important;
+    }
+    
+}

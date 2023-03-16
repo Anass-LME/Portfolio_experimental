@@ -1,0 +1,42 @@
+.footer {
+    color: white;
+}
+
+.footer h3 {
+    font-size: 1em;
+}
+
+.footer h8 {
+    border-top: 0.5px solid white;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+.links_grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+}
+
+.circle_hello {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-sizing: content-box;
+    position: absolute;
+    margin-top: -17px;
+}
+
+.avatar {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    padding-top: 30px;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}

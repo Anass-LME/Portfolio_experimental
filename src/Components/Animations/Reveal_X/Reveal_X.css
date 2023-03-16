@@ -1,0 +1,14 @@
+.line {
+    stroke-width: 10px;
+    transform: skew(40deg);
+    rotate: 130deg;
+    position: absolute;
+    transition: 1s ease;
+    animation-name: show_up;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
